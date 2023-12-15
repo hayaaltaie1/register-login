@@ -12,6 +12,10 @@ const AuthModel = require('./models/auth')
 
 dbConnection();
 
+app.get('/', (req,res)=>{
+    res.send('hello from node')
+})
+
 //Register
 app.post('/register' , async(req,res)=>{
     const {email, password} = req.body;
